@@ -5,8 +5,10 @@ function Square({ value, onSquareClick }) {
     <button className="square" onClick={onSquareClick}>
   {value}</button>);
 
-  function handleClick() {
-    setValue('X');
+function handleClick(i) {
+  const nextSquares = squares.slice();
+  nextSquares[i] = "X";
+  setSquares(nextSquares);
   }
 
   return (
